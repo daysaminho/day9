@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#character {
+    width: 256px;
+    height: 256px;
+
+    bottom: 0;
+    position: absolute;
+
+    background-image: url('walking.png');
+}
+.walking-left {
+    animation: walk-left 1s steps(10) infinite; 
+}
+
+.walking-right {
+    animation: walk-right 1s steps(10) infinite; 
+}
+
+.resting {
+    background-position: 0 0; 
+}
+
+@keyframes walk-right {
+    from {
+        background-position: 0 0px; 
+    }
+    to {
+        background-position: -2560px 0; 
+    }
+}
+
+
+@keyframes walk-left {
+    from {
+        background-position: -2560px 0; 
+    }
+    to {
+        background-position: 0 0; 
+    }
+}
+
+@keyframes play {
+    from {
+        background-position: 0px; 
+    }
+    to {
+        background-position: -2560px; 
+    }
+}
